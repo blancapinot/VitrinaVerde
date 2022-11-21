@@ -15,7 +15,17 @@
 
 *[Blanca Pinot Jara](#personas-desarrolladores)
 
-*[create table Contacto
+*[Usuario Admin: blankitta@gmail.com / Contrasena: 1234 , este Usuario puede editar, agregar o eliminar en todas las vistas.](#usuario administrador)
+
+*[Usuario Vendedor: Losmejores@awakelab.cl  / Contrasena: 12345, este usuario puede editar productos y proveedores.](#usuario vendedor)
+
+*[SQL](#SQL)
+
+usuario:root
+
+contrasena:undertaker179
+
+create table Contacto
 (
 id            bigint auto_increment
 primary key,
@@ -78,5 +88,5 @@ username varchar(255) not null
 primary key,
 password varchar(255) null,
 rol      varchar(255) null
-);](#sql)
+);
 
