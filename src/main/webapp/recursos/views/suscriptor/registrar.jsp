@@ -14,7 +14,7 @@
 <div class="container">
     <%@include file="../menu.jsp" %>
     <h1>Registro newsletter</h1>
-    <p>Suscribete para recibir todas nuestras novedades </p>
+    <p>Suscríbete para recibir todas nuestras novedades desde el 21 de noviembre del 2022 </p>
     <spring:url value="/suscriptor/guardar" var="enviarURL" htmlEscape="true"/>
     <form:form modelAttribute="suscriptorForm" method="post" action="${enviarURL}" cssClass="form">
         <div class="form-group row">

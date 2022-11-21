@@ -18,7 +18,7 @@
 <div class="container">
     <%@include file="../menu.jsp" %>
     <h1>Los mejores productos seleccionado para ti</h1>
-    <sec:authorize access="hasAnyAuthority('ADMINS')">
+    <sec:authorize access="hasAnyAuthority('ADMIN')">
     <div class="row">
         <a class="nav-link" href="${pageContext.request.contextPath}/producto/agregar">Agregar</a>
     </div>
@@ -33,12 +33,14 @@
             <h3><c:out value="${productos.nombre}"/></h3>
             <p><c:out value="${productos.descripcion}"/></p>
             <h4>$ <c:out value="${productos.precio}"/></h4>
+            <sec:authorize access="isAuthenticated()">
             <div class="row">
                 <a class="nav-link"
                    href="${pageContext.request.contextPath}/producto/editar?id=${productos.id}">Editar</a>
                 <a class="nav-link"
                    href="${pageContext.request.contextPath}/producto/eliminar/${productos.id}">Eliminar</a>
             </div>
+            </sec:authorize>
         </div>
     </div>
     <hr>
